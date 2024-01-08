@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astralite Collision</title>
+    <script src="https://kit.fontawesome.com/6da309e1f7.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/spaceship.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a class="logo" href="index.html"><img src="images/logo.png"><p>Astralite Collsion</p></a>
+            </div>
+            <div class="toggle">
+                <i class="fas fa-bars ouvrir"></i>
+                <i class="fas fa-times fermer"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="#">Nouveautés</a></li>
+                <li><a href="#">Wiki</a></li>
+                <li><a href="#">Communauté</a></li>
+                <li><a href="#">Jouer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="middle">
+        <div class="middle_text">
+            <h1>Un shooter vertical à la Space Invader, ça vous tente? Voici Astralite Collision, en plus c'est gratuit!</h1>
+            <p>Jouez dès à présent au tout nouveau Shooter et usez votre dextérité afin de vous sortir de situations extrèmes ...</p>
+            <a href="play.html">Télécharger</a><br><br>
+            <div class="carrousel">
+                <video autoplay muted loop>
+                    <source src="images/vid1.mp4" type="video/mp4">
+                </video>
+                <img src="images/img1.png">
+                <!-- <img src="images/img2.png">
+                <img src="images/img3.png"> -->
+            </div>
+        </div>
+
+        <div class="middle_img">
+            <img src="images/spaceship.png" id="vaisseauImage">
+        </div>
+    </section>
+
+    <div class="icons">
+        <a href="https://www.youtube.com/channel/UCU1DgExmYlEPLCqZX1lOM_w" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/astralite_game/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <a href="https://www.tiktok.com/@astralite_game" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://discord.gg/2cgBWetyaM" target="_blank"><i class="fa-brands fa-discord fa-2xs"></i></a>
+    </div>
+    
+</body>
+</html>
+<script>
+
+    const keyword = "COLLISION";
+    let keywordIndex = 0;
+
+    const vaisseau = document.querySelector('#vaisseauImage');
+
+    function checkKeyword(key) {
+    if (key.toUpperCase() === keyword[keywordIndex]) {
+        keywordIndex++;
+
+        if (keywordIndex === keyword.length) {
+            keywordIndex = 0;
+            // Animation du vaisseau
+            vaisseau.style.transition = "transform 6s";
+            
+            // Faire monter lentement le vaisseau
+            vaisseau.style.transform = "translateY(10%) rotate(-110deg)";
+            vaisseau.style.transform = "translateX(-300%) rotate(-110deg)";
+        }
+        } else {
+            keywordIndex = 0;
+        }
+    }
+
+    document.addEventListener("keydown", (event) => {
+    const key = event.key;
+    checkKeyword(key);
+    });
+
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Rubik, sans-serif;
+        font-size: 1.1rem;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    body{
+        background: linear-gradient(90deg, #504887 20%, #6d4886 50%, #9B59B6 75%);
+        overflow: hidden;
+        display: flex;
+    }
+
+    header{
+        position: absolute;
+        width: 100%;
+        height: 8vh;
+        top: 0;
+        left: 0;
+        background: transparent;
+        color: #fff;
+        padding: 0 2rem;
+        z-index: 1;
+    }
+
+    nav{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        font-size: 2rem;
+        color: white;
+        margin: 30px 0 0 -20px;
+    }
+
+    .logo img{
+        width: 30%;
+        float: left;
+        filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        width: 550px;
+    }
+
+    .menu li a{
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+    }
+
+    /* Style du rectangle vert */
+    .menu li a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px; /* Ajustez la position du rectangle par rapport au texte du lien */
+        left: 0;
+        width: 20px; /* Largeur du rectangle */
+        height: 5px; /* Hauteur du rectangle */
+        border-radius: 5px;
+        background-color: green; /* Couleur du rectangle */
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+        transform: translateX(-100%); /* Le rectangle est initialement déplacé à gauche */
+        opacity: 0; /* Le rectangle est initialement invisible */
+    }
+
+    /* Animation au survol */
+    .menu li a:hover::after {
+        opacity: 1; /* Le rectangle devient visible */
+        transform: translateX(0%); /* Déplacement du rectangle vers la droite */
+        width: 100%;
+    }
+
+    .middle{
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 15rem;
+    }
+
+    .middle > div:nth-child(1){
+        grid-column: 1/2;
+        resize: horizontal;
+        width: 130%;
+    }
+
+    section{
+        padding: 0 10%;
+    }
+
+    .middle_text h1{
+        font-size: 45px;
+        line-height: 1.1;
+        color: white;
+        margin: 0 0 25px;
+    }
+
+    .middle_text p{
+        color: white;
+        font-size: 15px;
+        line-height: 1.2;
+        margin-bottom: 40px;
+    }
+
+    .middle_img{
+        max-width: 700px;
+        margin: auto;
+        display: inline-block;
+    }
+
+    .middle_img img{
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 0 0.75rem #333);
+    }
+
+    .middle_text a{
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+        color: white;
+        background: #9B59B6;
+        border: 1px solid transparent;
+        padding: 12px 30px;
+        line-height: 1.4;
+        font-weight: 500;
+        border-radius: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        transition: all .55s ease;
+    }
+
+    .middle_text a:hover{
+        background: transparent;
+        border: 1px solid white;
+        transform: translateX(5px);
+    }
+
+    .middle_text a.ctaa{
+        background: transparent;
+        border: 1px solid white;
+        margin-left: 20px;
+    }
+
+    .middle_text a.ctaa i{
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    .middle_text .carrousel video, .middle_text .carrousel img{
+        max-width: 350px;
+        border-radius: 5px;
+    }
+
+    .carrousel{
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 15px;
+        align-items: center;
+        padding: 2.5% 2.5%;
+    }
+
+
+    .icons{
+        position: absolute;
+        top: 50%;
+        padding: 0 3%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .icons i{
+        display: block;
+        margin: 26px 0;
+        font-size: 24px;
+        color: white;
+        transition: all .50s ease;
+    }
+
+    .icons i:hover{
+        color: #4d9559;
+        transform: translateY(-5px);
+    }
+
+    @media (max-width: 1650px){
+        body{
+            overflow: auto;
+        }
+        .middle_text{
+            font-size: 10rem;
+        }
+    }
+
+    @media (max-width: 1500px){
+        .middle{
+            gap: 10rem;
+        }
+        section{
+            padding: 0 10%;
+        }
+    }
+    @media (max-width: 1250px){
+        .middle{
+            gap: 5rem;
+        }
+        section{
+            padding: 0 5%;
+        }
+    }
+    @media (max-width: 1000px){
+        .middle{
+            gap: 1rem;
+        }
+        section{
+            padding: 0 3%;
+        }
+    }
+
+    @media (max-width: 1535px){
+  header{
+    padding: 15px 3%;
+    transition: .2s;
+  }
+  .icons{
+    padding: 0 3%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1600px){
+  section{
+    padding: 0 12%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1340px){
+  .hero-img img{
+    width: 100%;
+    height: auto;
+  }
+  .hero-text h1{
+    font-size: 40px;
+    margin: 0 0 30px;
+  }
+}
+
+@media (max-width: 1195px){
+  section{
+    padding: 0 3%;
+    transition: .2s;
+  }
+  .hero-text{
+    padding-top: 115px;
+  }
+  .hero-img{
+    text-align: center;
+  }
+  .hero-img img{
+    width: 560px;
+    height: auto;
+  }
+  .hero{
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .icons{
+    display: none;  
+  }
+  .hero-text h1{
+    font-size: 35px;
+  }
+}
+</style>
