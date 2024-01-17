@@ -13,7 +13,7 @@
           <i class="fas fa-times fermer"></i>
         </div>
             <div class="logo">
-                <a class="logo" href="index.php"><img src="../images/logo.png">ASTRALITE</a>
+                <a class="logo" href="../index.html"><img src="../images/logo.png">ASTRALITE</a>
             </div>
             <div class="search_container">
                 <form method="POST" action="">
@@ -58,7 +58,7 @@
             <p>Dans Astralite Collision les Comets on des statistiques différentes selon le nombre de comets éliminés.</p>
             <table>
                 <tr>
-                    <td>nombre</td>
+                    <td></td>
                     <td>vie</td>
                     <td>bouclier</td>
                     <td>dégâts</td>
@@ -86,7 +86,7 @@
             <p>Les stats changent pour les Armored Comets</p>
             <table>
                 <tr>
-                    <td>nombre</td>
+                    <td></td>
                     <td>vie</td>
                     <td>bouclier</td>
                     <td>dégâts</td>
@@ -114,7 +114,7 @@
             <p>Les stats changent encore pours la dernières catégorie, les Super Armored Comets</p>
             <table>
                 <tr>
-                    <td>nombre</td>
+                    <td></td>
                     <td>vie</td>
                     <td>bouclier</td>
                     <td>dégâts</td>
@@ -192,183 +192,197 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Rubik, sans-serif;
-        font-size: 1.1rem;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+
+    --linear-gradient: linear-gradient(90deg, #9013FE 50%, #6610F2 100%);
+
+    ::selection{
+        background-color: #9013FE;
         color: #fff;
-        text-decoration: none;
     }
+}
 
-    html {
-        font-size: 16px;
-        width: 100%;
-        height: 100%;
-    }
+html {
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
 
-    body {
-        color: #fff;
-        height: 100%;
-        font-family: Rubik, sans-serif;
-        background: linear-gradient(90deg, #504887 20%, #6d4886 50%, #9B59B6 75%);
-    }
+body {
+    color: #fff;
+    height: 100%;
+    font-family: Rubik, sans-serif;
+    background-color: #f8f9fa;
+}
 
-    header {
-        background: transparent;
-        border-bottom: 1px solid #777;
-        color: #fff;
-        padding: 0 2rem;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-    }
+header {
+    background: transparent;
+    border-bottom: 1px solid #777;
+    padding: 0 2rem;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
 
-    .logo {
-        font-size: 1.1rem;
-        color: white;
-    }
+.logo {
+    font-size: 1.1rem;
+}
 
-    .logo img{
-        max-width: 50px;
-        float: left;
-    }
+.logo img{
+    max-width: 50px;
+    float: left;
+}
 
-    .search_container {
-        float: right;
-    }
+.search_container {
+    float: right;
+}
 
-    input[type=text]{
-        color: #000;
-        padding: 6px;
-        font-size: 17px;
-        border: none;
-        border-radius: 5px 0px 0px 5px;
-        outline: none;
-    }
+input[type=text] {
+    color: #000;
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+}
 
-    .search_container button {
-        float: right;
-        padding: 6px 10px;
-        color: #fff;
-        background: #504887;
-        font-size: 17px;
-        border: none;
-        cursor: pointer;
-        border-radius: 0px 5px 5px 0px;
-    }
+.search_container button {
+    float: right;
+    padding: 6px 10px;
+    background: var(--linear-gradient);
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+}
 
-    .search_container button:hover {
-        background: #6d4886;
-    }
+.search_container button i{
+    color: #fff;
+}
 
-    .suggestion a{
-        color: #fff;
-        text-decoration: none;
-        margin: 0px 10px 0px 10px;
-    }
+.suggestion a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0px 10px 0px 10px;
+}
 
-    .suggestion a:hover{
-        color: rgba(255, 255, 255, 0.7);
-        transition: all 0.4s ease;
-    }
+.suggestion a:hover{
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.4s ease;
+}
 
-    #suggestions{
-        position: absolute;
-        background-color: #504887;
-        border-radius: 0px 0px 10px 10px;
-    }
+#suggestions{
+    position: absolute;
+    background: var(--linear-gradient);
+    border-radius: 0px 0px 10px 10px;
+}
 
-    .side-nav{
-        width: 300px;
-        margin: 0px 0px 0px 15px;
-        padding: 15px 0px 0px 0px;
-        background-color: transparent;
-        position: absolute;
-    }
+.side-nav{
+    width: 300px;
+    margin: 0px 0px 0px 15px;
+    padding: 15px 0px 0px 0px;
+    background-color: transparent;
+    position: absolute;
+}
 
-    .side-nav ul{
-        margin: 0px 0px 25px 0px;
-        list-style-type: none;
-    }
+.side-nav ul{
+    margin: 0px 0px 25px 0px;
+    list-style-type: none;
+}
 
-    .side-nav ul li a{
-        text-decoration: none;
-        color: #fff;
-        border-radius: 10px;
-    }
+.side-nav ul li a{
+    text-decoration: none;
+    border-radius: 10px;
+}
 
-    .side-nav ul li a:hover{
-        color: #9B59B6;
-        transition: all 0.3s ease;
-    }
+.side-nav ul li a:hover{
+    color: #9013FE;
+    transition: all 0.3s ease;
+}
 
-    .side-nav ul li a.active{
-        text-decoration: underline;
-    }
+.side-nav ul li a.active{
+    text-decoration: underline;
+    color: #9013FE;
+    opacity: 0.5;
+}
 
-    label{
-        color: rgba(255, 255, 255, 0.7);
-    }
+label{
+    color: #9013FE;
+}
 
-    p{
-        color: white;
-        margin: 0px 25px 0px 25px;
-        text-align: center;
-    }
+p{
+    margin: 0px 25px 0px 25px;
+    text-align: center;
+}
 
-    .nav_title{
-        color: #fff;
-        text-align: center;
-        margin: 0px 0px 20px 0px;
-    }
+.nav_title{
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
 
-    .center{
-        width: 65%;
-        margin: auto;
-        text-align: left;
-        border-left: 1px solid #777; 
-        border-right: 1px solid #777;
-        padding: 25px;
-    }
+.center{
+    width: 65%;
+    margin: auto;
+    text-align: left;
+    border-left: 1px solid #777; 
+    border-right: 1px solid #777;
+    padding: 25px;
+}
 
-    .toggle{
-        display: none;
-    }
+.toggle{
+    display: none;
+}
 
-    table{
-        background-color: #504887;
-        border-radius: 10px;
-        padding: 10px;
-        margin: 20px;
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
-    }
+table{
+    background: var(--linear-gradient);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 25px 0 25px 0;
+}
 
-    td{
-        padding: 0 50px 0 0;
-    }
+tr:nth-child(1){
+    font-weight: bold;
+    opacity: 0.7;
+}
 
+td{
+    color: #fff;
+    padding: 10px 45px;
+}
 
-    @media all and (max-width: 1480px){
-  .center{
+td:hover{
+    transition: 0.55s ease-in-out;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+@media all and (max-width: 1480px){
+.center{
     margin-right: 0;
     width: 75%;
-  }
+}
 }
 
 @media all and (max-width: 1050px){
-  .center{
+.center{
     width: 65%;
-  }
+}
 }
 
 @media all and (max-width: 750px){
-  .center{
+.center{
     width: 100%;
-  }
+}
 
 header {
     background: transparent;
@@ -405,7 +419,7 @@ header {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+    background: var(--linear-gradient);
     flex-direction: column;
     padding: 2rem;
     justify-content: space-around;
@@ -414,10 +428,10 @@ header {
 }
 
 .side-nav ul, .side-nav h3{
-  width: 75%;
-  margin: auto;
-  text-align: center;
-  margin-top: 25px;
+width: 75%;
+margin: auto;
+text-align: center;
+margin-top: 25px;
 }
 
 .side-nav li a {
@@ -429,13 +443,13 @@ header {
 }
 
 .open .center{
-  display: none;
+display: none;
 }
 }
 
 @media all and (max-width: 550px){
-  .search_container{
+.search_container{
     display: none;
-  }
+}
 }
 </style>

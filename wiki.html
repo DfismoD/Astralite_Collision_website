@@ -144,8 +144,15 @@
         box-sizing: border-box;
         font-family: Rubik, sans-serif;
         font-size: 1.1rem;
-        color: #fff;
+        color: #333;
         text-decoration: none;
+
+        --linear-gradient: linear-gradient(90deg, #9013FE 50%, #6610F2 100%);
+
+        ::selection{
+            background-color: #9013FE;
+            color: #fff;
+        }
     }
 
     html {
@@ -158,13 +165,12 @@
         color: #fff;
         height: 100%;
         font-family: Rubik, sans-serif;
-        background: linear-gradient(90deg, #504887 20%, #6d4886 50%, #9B59B6 75%);
+        background-color: #f8f9fa;
     }
 
     header {
         background: transparent;
         border-bottom: 1px solid #777;
-        color: #fff;
         padding: 0 2rem;
         z-index: 1;
         display: flex;
@@ -175,7 +181,6 @@
 
     .logo {
         font-size: 1.1rem;
-        color: white;
     }
 
     .logo img{
@@ -199,16 +204,16 @@
     .search_container button {
         float: right;
         padding: 6px 10px;
+        background: var(--linear-gradient);
         color: #fff;
-        background: #504887;
         font-size: 17px;
         border: none;
         cursor: pointer;
         border-radius: 0px 5px 5px 0px;
     }
 
-    .search_container button:hover {
-        background: #6d4886;
+    .search_container button i{
+        color: #fff;
     }
 
     .suggestion a{
@@ -224,7 +229,7 @@
 
     #suggestions{
         position: absolute;
-        background-color: #504887;
+        background: var(--linear-gradient);
         border-radius: 0px 0px 10px 10px;
     }
 
@@ -243,31 +248,30 @@
 
     .side-nav ul li a{
         text-decoration: none;
-        color: #fff;
         border-radius: 10px;
     }
 
     .side-nav ul li a:hover{
-        color: #9B59B6;
+        color: #9013FE;
         transition: all 0.3s ease;
     }
 
     .side-nav ul li a.active{
         text-decoration: underline;
+        color: #9013FE;
+        opacity: 0.5;
     }
 
     label{
-        color: rgba(255, 255, 255, 0.7);
+        color: #9013FE;
     }
 
     p{
-        color: white;
         margin: 0px 25px 0px 25px;
         text-align: center;
     }
 
     .nav_title{
-        color: #fff;
         text-align: center;
         margin: 0px 0px 20px 0px;
     }
@@ -301,7 +305,6 @@
 
     .center_links ul{
         list-style: none;
-        color: #fff;
     }
 
     .center_links ul li{
@@ -310,17 +313,12 @@
     }
 
     .center_links ul li a{
-        color:#fff;
         text-decoration: none;
     }
 
     .center_links ul li a:hover{
         font-weight: bold;
         transition: all 0.3s ease;
-    }
-
-    h3{
-        color: #fff;
     }
 
     @media all and (max-width: 1480px){
