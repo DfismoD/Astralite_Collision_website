@@ -14,7 +14,7 @@
           <i class="fas fa-times fermer"></i>
         </div>
             <div class="logo">
-                <a class="logo" href="index.php"><img src="images/logo.png">ASTRALITE</a>
+                <a class="logo" href="index.html"><img src="images/logo.png">ASTRALITE</a>
             </div>
             <div class="search_container">
                 <form method="POST" action="">
@@ -33,7 +33,7 @@
       </ul>
       <ul>
         <label>REGLEMENT</label>
-        <li><a href="reglements/reglement_en_jeu.html" id="search">💡 Réglement du jeu</a></li>
+        <!-- <li><a href="reglements/reglement_en_jeu.html" id="search">💡 Réglement du jeu</a></li> -->
         <li><a href="reglements/reglement_discord.html" id="search">💡 Réglement Discord</a></li>
       </ul>
       <ul>
@@ -41,7 +41,7 @@
         <li><a href="gameplay/bien_debuter.html" id="search">📪 Bien débuter</a></li>
         <li><a href="gameplay/comet.html" id="search">☄️ Comets</a></li>
       </ul>
-      <ul>
+      <!-- <ul>
         <label>Combat</label>
         <li><a href="combat/deroulement_combat.html" id="search">🤜Déroulement d'un combat</a></li>
       </ul>
@@ -49,7 +49,7 @@
         <label>Equipement</label>
         <li><a href="equipements/armes.html" id="search">🗡️ Armes</a></li>
         <li><a href="equipements/armures.html" id="search">🛡️ Armures</a></li>
-      </ul>
+      </ul> -->
     </nav>
 
     <section class="center">
@@ -57,11 +57,11 @@
       <h1 class="center_title">A Propo D'Astralite Collision</h1>
       <h3>Origine:</h3><br>
       <p>
-        Astralite est un projet lancé par 3 lycéens courant printemps 2023, Appelé à l’origine «  Projet FKI » pour « Fismo » « Keyzun » « Intox », ce projet a pour but final la réalisation complète d’un jeu vidéo et de son environnement, site internet, image et réseaux sociaux.
+        Astralite est un projet lancé par 3 lycéens courant printemps 2023, Appelé à l’origine « Projet FKI » pour « Fismo » « Keyzun » « Intox », ce projet a pour but final la réalisation complète d’un univers, d’une histoire au centre de plusieurs jeux vidéos et de leur environnement, site internet et réseaux sociaux.
       </p><br><br>
       <h3>Histoire:</h3><br>
       <p>
-        Bienvenue sur corbera, une île paisible et fantastique jusqu'à l'arrivée de la "faction Z". Déjà présente sur l'île mais jusqu'à présent jugée inoffensive, celle-ci prend le total contrôle de l'île lors d'un assaut innattendu. Isolé de l'attaque par votre oncle vous vous rendez-compte de sa disparition lors de votre retour, la seule chose qu'il vous a laissé: un médaillon. Vous partez alors à sa recherche où, vous vous rendez vite compte que la "faction Z" ne va pas vous arranger la tâche. Petit à petit vous découvrez la raison de sa venue ainsi que le mystère qui l'entoure. Est-ce que la disparision de votre oncle ne serait pas en rapport avec ce mystère ?
+        Bienvenue sur Corbera, une île paisible et fantastique jusqu'à l'arrivée de la "faction Z". Déjà présente sur l'île mais jusqu'à présent jugée inoffensive, celle-ci prend le total contrôle de l'île lors d'un assaut innattendu. Isolé de l'attaque par votre oncle, vous vous rendez-compte de la disparition de celui-ci lors de votre retour. La seule chose qu'il vous a laissé, un médaillon. Vous partez alors dans sa recherche mais vous vous rendrez vite compte que la "faction Z" ne va pas vous arranger la tâche. Petit à petit vous découvrez la raison de son oppression ainsi que le mystère qui entoure cette faction. Est-ce que la disparision de votre oncle ne serait pas en rapport avec ce mystère ?
       </p>
       <nav class="center_links">
         <ul>
@@ -90,13 +90,13 @@
     const articles = [
       {name: '<a href="wiki.html">A propo d\'Astralite</a>', catégorie: 1},
       {name: '<a href="faq.html">FAQ</a>', catégorie: 3},
-      {name: '<a href="reglements/reglement_en_jeu.html">Réglement du jeu</a>', catégorie: 4},
+    //   {name: '<a href="reglements/reglement_en_jeu.html">Réglement du jeu</a>', catégorie: 4},
       {name: '<a href="reglements/reglement_discord.html">Réglement Discord</a>', catégorie: 5},
       {name: '<a href="gameplay/bien_débuter.html">Bien débuter</a>', catégorie: 6},
       {name: '<a href="gameplay/comet.html">Comets</a>', catégorie: 7},
-      {name: '<a href="combat/deroulement_combat.html">Déroulement d\'un combat</a>', catégorie: 8},
-      {name: '<a href="equipements/armes.html">Armes</a>', catégorie: 9},
-      {name: '<a href="equipements/armures.html">Armures</a>', catégorie: 10},
+    //   {name: '<a href="combat/deroulement_combat.html">Déroulement d\'un combat</a>', catégorie: 8},
+    //   {name: '<a href="equipements/armes.html">Armes</a>', catégorie: 9},
+    //   {name: '<a href="equipements/armures.html">Armures</a>', catégorie: 10},
     ];
 
     const searchinput = document.getElementById('searchInput');
@@ -144,10 +144,8 @@
         box-sizing: border-box;
         font-family: Rubik, sans-serif;
         font-size: 1.1rem;
-        color: #333;
+        color: #fff;
         text-decoration: none;
-
-        --linear-gradient: linear-gradient(90deg, #9013FE 50%, #6610F2 100%);
 
         ::selection{
             background-color: #9013FE;
@@ -162,10 +160,9 @@
     }
 
     body {
-        color: #fff;
         height: 100%;
         font-family: Rubik, sans-serif;
-        background-color: #f8f9fa;
+        background: linear-gradient(90deg, #504887 20%, #6d4886 50%, #9B59B6 75%);
     }
 
     header {
@@ -252,19 +249,14 @@
     }
 
     .side-nav ul li a:hover{
-        color: #9013FE;
         transition: all 0.3s ease;
     }
 
     .side-nav ul li a.active{
         text-decoration: underline;
-        color: #9013FE;
         opacity: 0.5;
     }
 
-    label{
-        color: #9013FE;
-    }
 
     p{
         margin: 0px 25px 0px 25px;

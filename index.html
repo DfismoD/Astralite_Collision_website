@@ -20,7 +20,7 @@
             </div>
             <ul class="menu">
                 <li><a href="index.html">Acceuil</a></li>
-                <li><a href="#">Nouveautés</a></li>
+                <!-- <li><a href="#">Nouveautés</a></li> -->
                 <li><a href="wiki.html">Wiki</a></li>
                 <!-- <li><a href="#">Communauté</a></li> -->
                 <li><a href="play.html">Jouer</a></li>
@@ -97,15 +97,14 @@
         box-sizing: border-box;
         font-family: Rubik, sans-serif;
         font-size: 1.1rem;
-        color: #333;
+        color: #fff;
         text-decoration: none;
 
         --linear-gradient: linear-gradient(90deg, #9013FE 50%, #6610F2 100%);
     }
 
     body{
-        /* background: linear-gradient(90deg, #504887 20%, #6d4886 50%, #9B59B6 75%); */
-        background-color: #f8f9fa;
+        background: linear-gradient(90deg, #504887 20%, #6d4886 50%, #9B59B6 75%);
         overflow: hidden;
         display: flex;
     }
@@ -151,7 +150,7 @@
         justify-content: space-between;
         align-items: center;
         list-style: none;
-        width: 550px;
+        width: 300px;
         background: var(--linear-gradient);
         padding: 15px;
         border-radius: 50px;
@@ -165,7 +164,7 @@
     }
 
     .menu li:hover{
-        background-color: #9448B3;
+        text-decoration: underline;
     }
 
     /* .menu li a::after {
