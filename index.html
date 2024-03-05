@@ -19,10 +19,8 @@
                 <i class="fas fa-times fermer"></i>
             </div>
             <ul class="menu">
-                <li><a href="index.html">Acceuil</a></li>
-                <!-- <li><a href="#">Nouveautés</a></li> -->
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="wiki.html">Wiki</a></li>
-                <!-- <li><a href="#">Communauté</a></li> -->
                 <li><a href="play.html">Jouer</a></li>
             </ul>
         </nav>
@@ -38,8 +36,6 @@
                     <source src="images/vid1.mp4" type="video/mp4">
                 </video>
                 <img src="images/img1.png">
-                <!-- <img src="images/img2.png">
-                <img src="images/img3.png"> -->
             </div>
         </div>
 
@@ -70,12 +66,11 @@
 
         if (keywordIndex === keyword.length) {
             keywordIndex = 0;
-            // Animation du vaisseau
+
             vaisseau.style.transition = "transform 6s";
             
-            // Faire monter lentement le vaisseau
             vaisseau.style.transform = "translateY(10%) rotate(-110deg)";
-            vaisseau.style.transform = "translateX(-300%) rotate(-110deg)";
+            vaisseau.style.transform = "translateX(-500%) rotate(-110deg)";
         }
         } else {
             keywordIndex = 0;
@@ -105,7 +100,8 @@
 
     body{
         background: linear-gradient(90deg, #504887 20%, #6d4886 50%, #9B59B6 75%);
-        overflow: hidden;
+        overflow: scrollcollsion
+        ;
         display: flex;
     }
 
@@ -154,7 +150,6 @@
         background: var(--linear-gradient);
         padding: 15px;
         border-radius: 50px;
-        /* box-shadow:  10px 10px 10px #333; */
     }
 
     .menu li a{
@@ -167,51 +162,28 @@
         text-decoration: underline;
     }
 
-    /* .menu li a::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 20px;
-        height: 5px;
-        border-radius: 5px;
-        background-color: green;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, width 0.3s ease-in-out;
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    .menu li a:hover::after {
-        opacity: 1;
-        transform: translateX(0%);
-        width: 100%;
-    } */
-
-    .middle{
-        height: 100%;
-        width: 100%;
-        min-height: 100vh;
-        position: relative;
+    section{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        gap: 15rem;
+        grid-gap: 10px;
+        grid-template-areas: 
+            "a a b b"
+            "a a b b";
+        align-items: baseline;
+        padding: 0 10%;
+        transform: translate(0, 15%);
     }
 
-    .middle > div:nth-child(1){
+    /* .middle > div:nth-child(1){
         grid-column: 1/2;
         resize: horizontal;
         width: 140%;
-    }
-
-    section{
-        padding: 0 10%;
-    }
+    } */
 
     .middle_text{
         padding: 15px;
         border-radius: 50px;
-        /* box-shadow:  10px 10px 10px #333; */
+        grid-area: a;
     }
 
     .middle_text h1{
@@ -230,6 +202,7 @@
         max-width: 700px;
         margin: auto;
         display: inline-block;
+        grid-area: b;
     }
 
     .middle_img img{
@@ -307,94 +280,10 @@
         transform: scale(1.3);
     }
 
-    @media (max-width: 1650px){
-        body{
-            overflow: auto;
-        }
-        .middle_text{
-            font-size: 10rem;
+    @media (max-width: 1150px){
+        #vaisseauImage{
+            width: 300px;
         }
     }
 
-    @media (max-width: 1500px){
-        .middle{
-            gap: 10rem;
-        }
-        section{
-            padding: 0 10%;
-        }
-    }
-    @media (max-width: 1250px){
-        .middle{
-            gap: 5rem;
-        }
-        section{
-            padding: 0 5%;
-        }
-    }
-    @media (max-width: 1000px){
-        .middle{
-            gap: 1rem;
-        }
-        section{
-            padding: 0 3%;
-        }
-    }
-
-    @media (max-width: 1535px){
-  header{
-    padding: 15px 3%;
-    transition: .2s;
-  }
-  .icons{
-    padding: 0 3%;
-    transition: .2s;
-  }
-}
-
-@media (max-width: 1600px){
-  section{
-    padding: 0 12%;
-    transition: .2s;
-  }
-}
-
-@media (max-width: 1340px){
-  .hero-img img{
-    width: 100%;
-    height: auto;
-  }
-  .hero-text h1{
-    font-size: 40px;
-    margin: 0 0 30px;
-  }
-}
-
-@media (max-width: 1195px){
-  section{
-    padding: 0 3%;
-    transition: .2s;
-  }
-  .hero-text{
-    padding-top: 115px;
-  }
-  .hero-img{
-    text-align: center;
-  }
-  .hero-img img{
-    width: 560px;
-    height: auto;
-  }
-  .hero{
-    height: 100%;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-  }
-  .icons{
-    display: none;  
-  }
-  .hero-text h1{
-    font-size: 35px;
-  }
-}
 </style>

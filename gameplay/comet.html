@@ -31,30 +31,16 @@
         <li><a href="../faq.html" id="search">❓ FAQ</a></li>
       </ul>
       <ul>
-        <label>REGLEMENT</label>
-        <li><a href="reglements/reglement_en_jeu.html" id="search">💡 Réglement du jeu</a></li>
-        <li><a href="reglements/reglement_discord.html" id="search">💡 Réglement Discord</a></li>
-      </ul>
-      <ul>
         <label>GAMEPLAY</label>
-        <li><a href="gameplay/bien_debuter.html" id="search">📪 Bien débuter</a></li>
-        <li><a href="gameplay/comet.html" id="search" class="active">☄️ Comets</a></li>
-      </ul>
-      <ul>
-        <label>Combat</label>
-        <li><a href="combat/deroulement_combat.html" id="search">🤜Déroulement d'un combat</a></li>
-      </ul>
-      <ul>
-        <label>Equipement</label>
-        <li><a href="equipements/armes.html" id="search">🗡️ Armes</a></li>
-        <li><a href="equipements/armures.html" id="search">🛡️ Armures</a></li>
+        <li><a href="bien_debuter.html" id="search">📪 Bien débuter</a></li>
+        <li><a href="comet.html" id="search" class="active">☄️ Comets</a></li>
       </ul>
     </nav>
 
     <section class="center">
         <article>
-            <h1>Info à savoir sur la Comet</h1>
-            <img src="../images/comet.png">
+            <h1>Info à savoir sur la Comet</h1><br><br>
+            <!-- <img src="../images/comet.png"> -->
             <p>Dans Astralite Collision les Comets on des statistiques différentes selon le nombre de comets éliminés.</p>
             <table>
                 <tr>
@@ -161,13 +147,8 @@
         const articles = [
             {name: '<a href="../wiki.html">A propo d\'Astralite</a>', catégorie: 1},
             {name: '<a href="../faq.html">FAQ</a>', catégorie: 3},
-            {name: '<a href="reglements/reglement_en_jeu.html">Réglement du jeu</a>', catégorie: 4},
-            {name: '<a href="reglements/reglement_discord.html">Réglement Discord</a>', catégorie: 5},
             {name: '<a href="gameplay/bien_débuter.html">Bien débuter</a>', catégorie: 6},
             {name: '<a href="gameplay/comet.html">Comets</a>', catégorie: 7},
-            {name: '<a href="combat/deroulement_combat.html">Déroulement d\'un combat</a>', catégorie: 8},
-            {name: '<a href="equipements/armes.html">Armes</a>', catégorie: 9},
-            {name: '<a href="equipements/armures.html">Armures</a>', catégorie: 10},
     ];
 
     const searchinput = document.getElementById('searchInput');
@@ -198,10 +179,8 @@
     box-sizing: border-box;
     font-family: Rubik, sans-serif;
     font-size: 1.1rem;
-    color: #333;
+    color: #fff;
     text-decoration: none;
-
-    --linear-gradient: linear-gradient(90deg, #9013FE 50%, #6610F2 100%);
 
     ::selection{
         background-color: #9013FE;
@@ -219,7 +198,7 @@ body {
     color: #fff;
     height: 100%;
     font-family: Rubik, sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(90deg, #504887 20%, #6d4886 50%, #9B59B6 75%);
 }
 
 header {
@@ -312,12 +291,7 @@ input[type=text] {
 
 .side-nav ul li a.active{
     text-decoration: underline;
-    color: #9013FE;
     opacity: 0.5;
-}
-
-label{
-    color: #9013FE;
 }
 
 p{
